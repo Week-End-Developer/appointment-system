@@ -45,7 +45,7 @@ function ComplaintPetSelectionPage() {
             };
             fetchPets();
         }
-    }, []);
+    }, [doctorDetailData]);
 
     useEffect(() => {
         if (!selectedPet) setSelectedPet(appointment.pet);

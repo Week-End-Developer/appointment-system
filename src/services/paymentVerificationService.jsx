@@ -1,6 +1,5 @@
 const paymentVerificationService = {
     check: (appointment) => {
-        console.log(appointment);
         if (
             !appointment.card_name || 
             !appointment.card_number ||

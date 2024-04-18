@@ -15,7 +15,6 @@ function Payment() {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        console.log("tetikkkk");
       dispatch(removeCardDetails());
     },[])
 
@@ -79,21 +78,6 @@ function Payment() {
         }
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if (cardNumber && cardName && cardDateMonth && cardDateYear && cardCVV) {
-            console.log('Form submitted successfully');
-        } else {
-            setErrors({
-                cardNumber: cardNumber ? '' : 'Card number is required',
-                cardName: cardName ? '' : 'Cardholder name is required',
-                cardDateMonth: cardDateMonth ? '' : 'Expiration month is required',
-                cardDateYear: cardDateYear ? '' : 'Expiration year is required',
-                cardCVV: cardCVV ? '' : 'CVV is required',
-            });
-        }
-    };
-
     return (
         <div className={styles.container}>
             <div className={styles.cardImageContainer}>
@@ -106,7 +90,7 @@ function Payment() {
                 />
             </div>
             <div className={styles.cardDetailContainer}>
-                <form id="payment-form" onSubmit={handleSubmit}>
+                <form id="payment-form">
                     <div className="form-group">
                         <label htmlFor="cardName">Kartın Üzerindeki İsim</label>
                         <input

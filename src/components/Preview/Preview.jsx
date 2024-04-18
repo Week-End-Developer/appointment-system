@@ -45,10 +45,12 @@ function Preview({ couponDisabled }) {
     };
 
     function onCouponCodeClick() {
-        const result = coupons.find(x => x.code === couponUser.toUpperCase());
-        if (result) {
-            setCoupon(result);
-            dispatch(setCouponCode(result));
+        if (couponUser && couponUser.length > 0) {
+            const result = coupons.find(x => x.code === couponUser.toUpperCase());
+            if (result) {
+                setCoupon(result);
+                dispatch(setCouponCode(result));
+            }
         }
     }
 
