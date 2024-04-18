@@ -1,0 +1,80 @@
+.container {
+    border-radius: 8px;
+    padding: 1px 12px 12px 12px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.doctorName {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.profession {
+    font-size: 12px;
+}
+
+.innerSectionWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.doctorDetail {
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section {
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: calc(50% - 6px);
+    &:nth-child(1) {
+        width: 100%;
+    }
+    &:nth-child(6) {
+        width: 100%;
+    }
+    &:nth-child(7) {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
+    &:nth-child(8) {
+        width: 100%;
+    }
+    &:nth-child(9) {
+        width: 100%;
+        :last-child {
+            font-size: 24px;
+        }
+    }
+}
+
+.label {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.paymentDetail div {
+    display: flex;
+    width: 100%;
+
+    &:last-child {
+        display: flex;
+        justify-content: flex-end;
+        font-size: 16px;
+    }
+}

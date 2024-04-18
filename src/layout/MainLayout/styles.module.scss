@@ -1,0 +1,11 @@
+.mainBody {
+    padding: 0 60px;
+    height: calc(100% - 80px);
+    @media screen and (max-width: 768px) {
+        padding: 0 15px;
+    }
+
+    @media screen and (max-width: 480px) {
+        padding: 0 10px;
+    }
+}
